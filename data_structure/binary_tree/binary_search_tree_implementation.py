@@ -21,15 +21,24 @@ class BinaryTree:
 
     # Binary Tree Pre order traversal
     def pre_order_traverse(self):
-        self.__pre_order_traverse(self.root)
+        nodes = []
+        self.__pre_order_traverse(self.root, nodes)
+
+        return nodes
 
     # Binary Tree In order traversal
     def in_order_traverse(self):
-        self.__in_order_traverse(self.root)
+        nodes = []
+        self.__in_order_traverse(self.root, nodes)
+
+        return nodes
 
     # Binary Tree Post order traversal
     def post_order_traverse(self):
-        self.__post_order_traverse(self.root)
+        nodes = []
+        self.__post_order_traverse(self.root, nodes)
+
+        return nodes
 
     def height(self):
         return self.__height(self.root)
@@ -49,29 +58,36 @@ class BinaryTree:
 
         return node
 
-    def __pre_order_traverse(self, node):
+    def __pre_order_traverse(self, node, nodes):
         if node is None:
             return
 
-        print(node.value)
-        self.__pre_order_traverse(node.left_child)
-        self.__pre_order_traverse(node.right_child)
+        # Add to list
+        nodes.append(node.value)
 
-    def __in_order_traverse(self, node):
+        self.__pre_order_traverse(node.left_child, nodes)
+        self.__pre_order_traverse(node.right_child, nodes)
+
+    def __in_order_traverse(self, node, nodes):
         if node is None:
             return
 
-        self.__in_order_traverse(node.left_child)
-        print(node.value)
-        self.__in_order_traverse(node.right_child)
+        self.__in_order_traverse(node.left_child, nodes)
 
-    def __post_order_traverse(self, node):
+        # Add to list
+        nodes.append(node.value)
+
+        self.__in_order_traverse(node.right_child, nodes)
+
+    def __post_order_traverse(self, node, nodes):
         if node is None:
             return
 
-        self.__post_order_traverse(node.left_child)
-        self.__post_order_traverse(node.right_child)
-        print(node.value)
+        self.__post_order_traverse(node.left_child, nodes)
+        self.__post_order_traverse(node.right_child, nodes)
+
+        # Add to list
+        nodes.append(node.value)
 
     def __height(self, node):
         if node is None:
@@ -93,8 +109,6 @@ if __name__ == "__main__":
     binary_tree.insert(50)
 
     # Traversal
-    binary_tree.pre_order_traverse()
-    print("---")
-    binary_tree.in_order_traverse()
-    print("---")
-    binary_tree.post_order_traverse()
+    print(binary_tree.pre_order_traverse())
+    print(binary_tree.in_order_traverse())
+    print(binary_tree.post_order_traverse())
