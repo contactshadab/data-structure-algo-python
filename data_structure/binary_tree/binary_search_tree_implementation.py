@@ -31,6 +31,9 @@ class BinaryTree:
     def post_order_traverse(self):
         self.__post_order_traverse(self.root)
 
+    def height(self):
+        return self.__height(self.root)
+
     # ----------------------------------------------------------------------------
     #                   All private methods from here
     # ----------------------------------------------------------------------------
@@ -69,6 +72,12 @@ class BinaryTree:
         self.__post_order_traverse(node.left_child)
         self.__post_order_traverse(node.right_child)
         print(node.value)
+
+    def __height(self, node):
+        if node is None:
+            return -1
+
+        return 1 + max(self.__height(node.left_child), self.__height(node.right_child))
 
 
 # Tests
