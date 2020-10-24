@@ -40,6 +40,13 @@ class BinaryTree:
 
         return nodes
 
+    # Binary Tree Level order traversal or Bredth First Traversal
+    def breadth_first_traverse(self):
+        for i in range(self.height()+1):
+            nodes = []
+            self.__get_nodes_at_distance(self.root, i, nodes)
+            print(nodes)
+
     def height(self):
         return self.__height(self.root)
 
@@ -89,6 +96,18 @@ class BinaryTree:
         # Add to list
         nodes.append(node.value)
 
+    def __get_nodes_at_distance(self, root, distance, nodes):
+        if root is None:
+            return
+
+        # If we reach the distance
+        if distance == 0:
+            nodes.append(root.value)
+
+        distance = distance - 1
+        self.__get_nodes_at_distance(root.left_child, distance, nodes)
+        self.__get_nodes_at_distance(root.right_child, distance, nodes)
+
     def __height(self, node):
         if node is None:
             return -1
@@ -107,8 +126,17 @@ if __name__ == "__main__":
     binary_tree.insert(20)
     binary_tree.insert(60)
     binary_tree.insert(50)
+    binary_tree.insert(5)
+    binary_tree.insert(4)
+    binary_tree.insert(6)
 
-    # Traversal
+    # Get tree height
+    print(binary_tree.height())
+
+    # Depth First Traversals
     print(binary_tree.pre_order_traverse())
     print(binary_tree.in_order_traverse())
     print(binary_tree.post_order_traverse())
+
+    # Bredth First Traversals
+    binary_tree.breadth_first_traverse()
