@@ -14,10 +14,15 @@ class BinaryTree:
 
     def __init__(self):
         self.root = None
+        self.__count = 0
 
     # Insert in a Binary Search Tree
     def insert(self, value):
         self.root = self.__insert(self.root, value)
+        self.__count += 1
+
+    def size(self):
+        return self.__count
 
     # Binary Tree Pre order traversal
     def pre_order_traverse(self):
@@ -124,6 +129,9 @@ if __name__ == "__main__":
     # Instantiate binary search tree
     binary_tree = BinaryTree()
 
+    # Get tree size
+    print(binary_tree.size())  # 0
+
     print(binary_tree.pre_order_traverse())  # Print empty list
     print(binary_tree.in_order_traverse())  # Print empty list
     print(binary_tree.post_order_traverse())    # Print empty list
@@ -138,6 +146,9 @@ if __name__ == "__main__":
     binary_tree.insert(5)
     binary_tree.insert(4)
     binary_tree.insert(6)
+
+    # Get tree size
+    print(binary_tree.size())  # 8
 
     # Get tree height
     print(binary_tree.height())
