@@ -42,6 +42,10 @@ class BinaryTree:
 
     # Binary Tree Level order traversal or Bredth First Traversal
     def breadth_first_traverse(self):
+        if self.root is None:
+            print([])
+            return
+
         for i in range(self.height()+1):
             nodes = []
             self.__get_nodes_at_distance(self.root, i, nodes)
@@ -119,6 +123,11 @@ class BinaryTree:
 if __name__ == "__main__":
     # Instantiate binary search tree
     binary_tree = BinaryTree()
+
+    print(binary_tree.pre_order_traverse())  # Print empty list
+    print(binary_tree.in_order_traverse())  # Print empty list
+    print(binary_tree.post_order_traverse())    # Print empty list
+    binary_tree.breadth_first_traverse()    # Print empty list
 
     # Populate binary search tree
     binary_tree.insert(10)
