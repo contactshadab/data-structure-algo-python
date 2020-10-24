@@ -27,6 +27,18 @@ class MyBinarySeachTree(BinaryTree):
 
         return self.__find(self.root, value)
 
+    def __find(self, node, value):
+        if node is None:
+            return False
+
+        if node.value == value:
+            return True
+
+        if value < node.value:
+            return self.__find(node.left_child, value)
+        else:
+            return self.__find(node.right_child, value)
+
 
 if __name__ == "__main__":
     # Populate binary search tree
