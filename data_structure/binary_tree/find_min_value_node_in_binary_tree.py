@@ -31,7 +31,7 @@ class MyBinaryTree(BinaryTree):
 
 if __name__ == "__main__":
     # Populate binary search tree
-    binary_tree = MyBinarySeachTree()
+    binary_tree = MyBinaryTree()
     binary_tree.insert(10)
     binary_tree.insert(30)
     binary_tree.insert(20)
