@@ -54,8 +54,13 @@ class BinaryTree:
             self.__get_nodes_at_distance(self.root, i, nodes)
             print(nodes)
 
+    # Height of Binary Tree (this implemntation is for both BST and BT)
     def height(self):
         return self.__height(self.root)
+
+    # Maximum in Binary Search Tree
+    def max(self):
+        return self.__max(self.root)
 
     # ----------------------------------------------------------------------------
     #                   All private methods from here
@@ -127,6 +132,12 @@ class BinaryTree:
 
         return 1 + self.__size(root.left_child) + self.__size(root.right_child)
 
+    def __max(self, root):
+        if root.right_child is None:
+            return root.value
+
+        return self.__max(root.right_child)
+
 
 # Tests
 if __name__ == "__main__":
@@ -164,3 +175,6 @@ if __name__ == "__main__":
 
     # Bredth First Traversals
     binary_tree.breadth_first_traverse()
+
+    # Get max
+    print(binary_tree.max())
