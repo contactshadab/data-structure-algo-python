@@ -2,14 +2,14 @@ from binary_search_tree_implementation import BinaryTree
 
 
 class MyBinaryTree(BinaryTree):
-    def are_siblings(self, value1, value2):
+    def are_siblings(self, first, second):
         if self.root is None:
             raise Exception('Empty tree')
 
-        if None in [value1, value2]:
+        if None in [first, second]:
             raise Exception('Illegal arguments')
 
-        return self.__are_siblings(self.root, sorted([value1, value2]))
+        return self.__are_siblings(self.root, sorted([first, second]))
 
     def __are_siblings(self, root, values):
         if root is None:
