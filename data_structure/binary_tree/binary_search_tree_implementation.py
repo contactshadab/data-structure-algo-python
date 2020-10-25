@@ -56,10 +56,16 @@ class BinaryTree:
 
     # Height of Binary Tree (this implemntation is for both BST and BT)
     def height(self):
+        if self.root is None:
+            raise Exception('Tree is empty')
+
         return self.__height(self.root)
 
     # Maximum in Binary Search Tree
     def max(self):
+        if self.root is None:
+            raise Exception('Tree is empty')
+
         return self.__max(self.root)
 
     # ----------------------------------------------------------------------------
