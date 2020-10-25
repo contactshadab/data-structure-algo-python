@@ -72,47 +72,47 @@ class BinaryTree:
     #                   All private methods from here
     # ----------------------------------------------------------------------------
 
-    def __insert(self, node, value):
-        if node is None:
+    def __insert(self, root, value):
+        if root is None:
             return Node(value)
 
-        if value < node.value:
-            node.left_child = self.__insert(node.left_child, value)
+        if value < root.value:
+            root.left_child = self.__insert(root.left_child, value)
         else:
-            node.right_child = self.__insert(node.right_child, value)
+            root.right_child = self.__insert(root.right_child, value)
 
-        return node
+        return root
 
-    def __pre_order_traverse(self, node, nodes):
-        if node is None:
+    def __pre_order_traverse(self, root, nodes):
+        if root is None:
             return
 
         # Add to list
-        nodes.append(node.value)
+        nodes.append(root.value)
 
-        self.__pre_order_traverse(node.left_child, nodes)
-        self.__pre_order_traverse(node.right_child, nodes)
+        self.__pre_order_traverse(root.left_child, nodes)
+        self.__pre_order_traverse(root.right_child, nodes)
 
-    def __in_order_traverse(self, node, nodes):
-        if node is None:
+    def __in_order_traverse(self, root, nodes):
+        if root is None:
             return
 
-        self.__in_order_traverse(node.left_child, nodes)
+        self.__in_order_traverse(root.left_child, nodes)
 
         # Add to list
-        nodes.append(node.value)
+        nodes.append(root.value)
 
-        self.__in_order_traverse(node.right_child, nodes)
+        self.__in_order_traverse(root.right_child, nodes)
 
-    def __post_order_traverse(self, node, nodes):
-        if node is None:
+    def __post_order_traverse(self, root, nodes):
+        if root is None:
             return
 
-        self.__post_order_traverse(node.left_child, nodes)
-        self.__post_order_traverse(node.right_child, nodes)
+        self.__post_order_traverse(root.left_child, nodes)
+        self.__post_order_traverse(root.right_child, nodes)
 
         # Add to list
-        nodes.append(node.value)
+        nodes.append(root.value)
 
     def __get_nodes_at_distance(self, root, distance, nodes):
         if root is None:
@@ -126,11 +126,11 @@ class BinaryTree:
         self.__get_nodes_at_distance(root.left_child, distance, nodes)
         self.__get_nodes_at_distance(root.right_child, distance, nodes)
 
-    def __height(self, node):
-        if node is None:
+    def __height(self, root):
+        if root is None:
             return -1
 
-        return 1 + max(self.__height(node.left_child), self.__height(node.right_child))
+        return 1 + max(self.__height(root.left_child), self.__height(root.right_child))
 
     def __size(self, root):
         if root is None:
