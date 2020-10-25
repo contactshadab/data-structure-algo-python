@@ -142,39 +142,39 @@ class BinaryTree:
 # Tests
 if __name__ == "__main__":
     # Instantiate binary search tree
-    binary_tree = BinaryTree()
+    binary_search_tree = BinaryTree()
 
     # Get tree size
-    print(binary_tree.size())  # 0
+    print(binary_search_tree.size())  # 0
 
-    print(binary_tree.pre_order_traverse())  # Print empty list
-    print(binary_tree.in_order_traverse())  # Print empty list
-    print(binary_tree.post_order_traverse())    # Print empty list
-    binary_tree.breadth_first_traverse()    # Print empty list
+    print(binary_search_tree.pre_order_traverse())  # Print empty list
+    print(binary_search_tree.in_order_traverse())  # Print empty list
+    print(binary_search_tree.post_order_traverse())    # Print empty list
+    binary_search_tree.breadth_first_traverse()    # Print empty list
 
     # Populate binary search tree
-    binary_tree.insert(10)
-    binary_tree.insert(30)
-    binary_tree.insert(20)
-    binary_tree.insert(60)
-    binary_tree.insert(50)
-    binary_tree.insert(5)
-    binary_tree.insert(4)
-    binary_tree.insert(6)
+    binary_search_tree.insert(10)
+    binary_search_tree.insert(30)
+    binary_search_tree.insert(20)
+    binary_search_tree.insert(60)
+    binary_search_tree.insert(50)
+    binary_search_tree.insert(5)
+    binary_search_tree.insert(4)
+    binary_search_tree.insert(6)
 
     # Get tree size
-    print(binary_tree.size())  # 8
+    print(binary_search_tree.size())  # 8
 
     # Get tree height
-    print(binary_tree.height())
+    print(binary_search_tree.height())
 
     # Depth First Traversals
-    print(binary_tree.pre_order_traverse())
-    print(binary_tree.in_order_traverse())
-    print(binary_tree.post_order_traverse())
+    print(binary_search_tree.pre_order_traverse())
+    print(binary_search_tree.in_order_traverse())
+    print(binary_search_tree.post_order_traverse())
 
     # Bredth First Traversals
-    binary_tree.breadth_first_traverse()
+    binary_search_tree.breadth_first_traverse()
 
     # Get max
-    print(binary_tree.max())
+    print(binary_search_tree.max())
