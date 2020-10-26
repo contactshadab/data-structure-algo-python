@@ -184,3 +184,6 @@ if __name__ == "__main__":
 
     # Get max
     print(binary_search_tree.max())
+
+    # Check if Tree is balanced
+    print(binary_search_tree.is_balanced())
