@@ -19,59 +19,6 @@ class BinaryTree:
     def insert(self, value):
         self.root = self.__insert(self.root, value)
 
-    def size(self):
-        return self.__size(self.root)
-
-    # Binary Tree Pre order traversal
-    def pre_order_traverse(self):
-        nodes = []
-        self.__pre_order_traverse(self.root, nodes)
-
-        return nodes
-
-    # Binary Tree In order traversal
-    def in_order_traverse(self):
-        nodes = []
-        self.__in_order_traverse(self.root, nodes)
-
-        return nodes
-
-    # Binary Tree Post order traversal
-    def post_order_traverse(self):
-        nodes = []
-        self.__post_order_traverse(self.root, nodes)
-
-        return nodes
-
-    # Binary Tree Level order traversal or Bredth First Traversal
-    def breadth_first_traverse(self):
-        if self.root is None:
-            print([])
-            return
-
-        for i in range(self.height()+1):
-            nodes = []
-            self.__get_nodes_at_distance(self.root, i, nodes)
-            print(nodes)
-
-    # Height of Binary Tree (this implemntation is for both BST and BT)
-    def height(self):
-        if self.root is None:
-            raise Exception('Tree is empty')
-
-        return self.__height(self.root)
-
-    # Maximum in Binary Search Tree
-    def max(self):
-        if self.root is None:
-            raise Exception('Tree is empty')
-
-        return self.__max(self.root)
-
-    # ----------------------------------------------------------------------------
-    #                   All private methods from here
-    # ----------------------------------------------------------------------------
-
     def __insert(self, root, value):
         if root is None:
             return Node(value)
@@ -83,6 +30,22 @@ class BinaryTree:
 
         return root
 
+    def size(self):
+        return self.__size(self.root)
+
+    def __size(self, root):
+        if root is None:
+            return 0
+
+        return 1 + self.__size(root.left_child) + self.__size(root.right_child)
+
+    # Binary Tree Pre order traversal
+    def pre_order_traverse(self):
+        nodes = []
+        self.__pre_order_traverse(self.root, nodes)
+
+        return nodes
+
     def __pre_order_traverse(self, root, nodes):
         if root is None:
             return
@@ -92,6 +55,13 @@ class BinaryTree:
 
         self.__pre_order_traverse(root.left_child, nodes)
         self.__pre_order_traverse(root.right_child, nodes)
+
+    # Binary Tree In order traversal
+    def in_order_traverse(self):
+        nodes = []
+        self.__in_order_traverse(self.root, nodes)
+
+        return nodes
 
     def __in_order_traverse(self, root, nodes):
         if root is None:
@@ -104,6 +74,13 @@ class BinaryTree:
 
         self.__in_order_traverse(root.right_child, nodes)
 
+    # Binary Tree Post order traversal
+    def post_order_traverse(self):
+        nodes = []
+        self.__post_order_traverse(self.root, nodes)
+
+        return nodes
+
     def __post_order_traverse(self, root, nodes):
         if root is None:
             return
@@ -113,6 +90,17 @@ class BinaryTree:
 
         # Add to list
         nodes.append(root.value)
+
+    # Binary Tree Level order traversal or Bredth First Traversal
+    def breadth_first_traverse(self):
+        if self.root is None:
+            print([])
+            return
+
+        for i in range(self.height()+1):
+            nodes = []
+            self.__get_nodes_at_distance(self.root, i, nodes)
+            print(nodes)
 
     def __get_nodes_at_distance(self, root, distance, nodes):
         if root is None:
@@ -126,17 +114,25 @@ class BinaryTree:
         self.__get_nodes_at_distance(root.left_child, distance, nodes)
         self.__get_nodes_at_distance(root.right_child, distance, nodes)
 
+    # Height of Binary Tree (this implemntation is for both BST and BT)
+    def height(self):
+        if self.root is None:
+            raise Exception('Tree is empty')
+
+        return self.__height(self.root)
+
     def __height(self, root):
         if root is None:
             return -1
 
         return 1 + max(self.__height(root.left_child), self.__height(root.right_child))
 
-    def __size(self, root):
-        if root is None:
-            return 0
+    # Maximum in Binary Search Tree
+    def max(self):
+        if self.root is None:
+            raise Exception('Tree is empty')
 
-        return 1 + self.__size(root.left_child) + self.__size(root.right_child)
+        return self.__max(self.root)
 
     def __max(self, root):
         if root.right_child is None:
@@ -184,6 +180,3 @@ if __name__ == "__main__":
 
     # Get max
     print(binary_search_tree.max())
-
-    # Check if Tree is balanced
-    print(binary_search_tree.is_balanced())
