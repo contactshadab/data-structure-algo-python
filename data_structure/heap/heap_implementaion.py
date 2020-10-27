@@ -37,7 +37,10 @@ class Heap:
 
         # Remove the root, i.e first item in list and replace it with the last item in the list (last left in heap)
         removed = self.items[0]
-        self.items[0] = self.items.pop()
+        last_item = self.items.pop()
+        # If it has only item pop() wll make list Empty, so you cannot access it with [0]
+        if self.items:
+            self.items[0] = last_item
 
         # Bubble down if heap condition fails
         self._bubble_down()
@@ -67,13 +70,10 @@ class Heap:
         return self.items[index] >= self._left_item(index) and self.items[index] >= self._right_item(index)
 
     def _max_child_index(self, index):
-        if not self._has_right(index):
+        if not self._has_right(index) or self._left_item(index) > self._right_item(index):
             return self._left_index(index)
 
-        if self._left_item(index) > self._right_item(index):
-            return self._left_index(index)
-        else:
-            self._right_index(index)
+        return self._right_index(index)
 
     def _has_left(self, index):
         return self._left_index(index) < len(self.items)
