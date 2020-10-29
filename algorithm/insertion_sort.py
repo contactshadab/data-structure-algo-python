@@ -1,3 +1,5 @@
+# Run time Complexity - O(n^2) both best case and worst case
+# Space complexity = O(1)
 
 def insertion_sort(items):
     if items is None:
