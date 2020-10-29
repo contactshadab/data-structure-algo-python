@@ -1,4 +1,10 @@
+# Run time Complexity - O(n) best case, O(n^2) worst case
+# Space complexity = O(1)
+
 def bubble_sort(items):
+    if items is None:
+        raise Exception('Empty list')
+
     # After every pass the next largest value will be move to its right position
     for i in range(len(items)):
         current = 0
