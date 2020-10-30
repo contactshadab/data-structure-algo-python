@@ -23,7 +23,7 @@ def _swap(items, left, right):
 
 
 if __name__ == "__main__":
-    items1 = [30, 20, 40, 10, 50, 0]
+    items1 = [30, 20, 40, 10, 50, 0, 30]
     selection_sort(items1)
     print(items1)
 
