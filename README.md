@@ -10,6 +10,5 @@ This repository contains Data Structures and Algorithms problems and their imple
 
 ## Algorithm
 
-- [Bubble Sort](https://github.com/contactshadab/data-structure-algo-python/tree/main/algorithm/bubble_sort.py)
-- [Selection Sort](https://github.com/contactshadab/data-structure-algo-python/tree/main/algorithm/selection_sort.py)
-- [Insertion Sort](https://github.com/contactshadab/data-structure-algo-python/tree/main/algorithm/insertion_sort.py)
+- [Sorting](https://github.com/contactshadab/data-structure-algo-python/tree/main/algorithm/sorting)
+- [Searching](https://github.com/contactshadab/data-structure-algo-python/tree/main/algorithm/searching)
