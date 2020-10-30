@@ -1,5 +1,5 @@
 def ternary_search(items, target):
-    return _ternary_search(items, target, 0, len(items)-1)
+    return _ternary_search(items, 0, len(items)-1, target)
 
 
 def _ternary_search(items, start, end, target):
@@ -22,7 +22,7 @@ def _ternary_search(items, start, end, target):
     elif target > items[mid1] and target < items[mid2]:
         return _ternary_search(items, mid1 + 1, mid2 - 1, target)
 
-    return _ternary_search(items, mid1 + 1, mid2 - 1, target)
+    return _ternary_search(items, mid2 + 1, end, target)
 
 
 if __name__ == "__main__":
@@ -31,3 +31,4 @@ if __name__ == "__main__":
     print(ternary_search(items, 30))  # 4
     print(ternary_search(items, 0))  # 1
     print(ternary_search(items, 100))    # -1
+    print(ternary_search([], 100))    # -1
