@@ -1,3 +1,4 @@
+# Run time complexity: O(n)
 def count(str):
     if str is None:
         raise Exception('Illegal argument')
@@ -10,6 +11,7 @@ def count(str):
     return count
 
 
-print(count("I have a vowel"))
-print(count(""))
-print(count(None))
+if __name__ == "__main__":
+    print(count("I have a vowel"))
+    print(count(""))
+    # print(count(None))  # Exception: Illegal argument
