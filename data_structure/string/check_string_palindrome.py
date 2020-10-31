@@ -1,5 +1,5 @@
 
-def is_palindrom(str):
+def is_palindrome(str):
     if str is None:
         raise Exception('Illegal argument')
 
@@ -17,7 +17,7 @@ def is_palindrom(str):
 
 
 if __name__ == "__main__":
-    print(is_palindrom("abba"))  # True
-    print(is_palindrom("abcba"))  # True
-    print(is_palindrom(""))  # True
-    print(is_palindrom("abca"))  # False
+    print(is_palindrome("abba"))  # True
+    print(is_palindrome("abcba"))  # True
+    print(is_palindrome(""))  # True
+    print(is_palindrome("abca"))  # False
