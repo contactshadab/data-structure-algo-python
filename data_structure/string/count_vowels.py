@@ -1,4 +1,7 @@
 def count(str):
+    if str is None:
+        raise Exception('Illegal argument')
+
     count = 0
     for ch in str:
         if ch in 'aeiou':
@@ -9,3 +12,4 @@ def count(str):
 
 print(count("I have a vowel"))
 print(count(""))
+print(count(None))
