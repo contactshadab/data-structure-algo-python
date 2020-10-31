@@ -4,6 +4,7 @@ This repository contains Data Structures and Algorithms problems and their imple
 
 ## Data Structure
 
+- [String](https://github.com/contactshadab/data-structure-algo-python/tree/main/data_structure/string)
 - [Binary Tree & Binary Search Tree](https://github.com/contactshadab/data-structure-algo-python/tree/main/data_structure/binary_tree)
 - [Heap](https://github.com/contactshadab/data-structure-algo-python/tree/main/data_structure/heap)
 - [AVL Tree](https://github.com/contactshadab/data-structure-algo-python/tree/main/data_structure/avl_tree)
