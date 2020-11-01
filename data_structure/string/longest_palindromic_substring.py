@@ -52,31 +52,30 @@ def isPalindrome(string, left, right):
 
 
 def longest_palindromic_substring_2(string):
-    result = string[0]
+    result = [0, 0]
     for i in range(1, len(string)):
         # Consider i as the center of the prospective palindrome
-        sub_result = check_palindrome(string, i-1, i+1)
-        if len(sub_result) > len(result):
-            result = sub_result
+        odd_result = check_palindrome(string, i-1, i+1)
 
         # Consider empty string before i as the center of the prospective palindrome
-        sub_result = check_palindrome(string, i-1, i)
-        if len(sub_result) > len(result):
-            result = sub_result
+        even_result = check_palindrome(string, i-1, i)
 
-    return result
+        # Take the max of both
+        max_result = max(odd_result, even_result, key=lambda x: x[1]-x[0])
+
+        # Update result
+        result = max(result, max_result, key=lambda x: x[1] - x[0])
+
+    return string[result[0]: result[1]+1]
 
 
 def check_palindrome(string, left, right):
-    result = string[0]
     while left >= 0 and right < len(string) and string[left] == string[right]:
-        # Update the result if palindrome found
-        if right - left + 1 > len(result):
-            result = string[left: right+1]
         left -= 1
         right += 1
 
-    return result
+    # Single character is always plaindrome
+    return [left+1, right-1] if left < right else [left, left]
 
 
 if __name__ == "__main__":
