@@ -35,30 +35,30 @@ def transform_1(string, key):
 # Solution 2
 # Run time Complexity: O(n), Space Complexity: O(n)
 def transform_2(string, key):
-	result = []
+    result = []
     alphabets = list("abcdefghijklmnopqrstuvwxyz")
-	
-	# Get the key in 0-25 range
-	new_key = key % 26
-	
-	for ch in string:
-		current_index = alphabets.index(ch)
-		new_index = (current_index + key) % 26
-		result.append(alphabets[new_index])
-		
-	return ''.join(result)
+    
+    # Get the key in 0-25 range
+    new_key = key % 26
+    
+    for ch in string:
+        current_index = alphabets.index(ch)
+        new_index = (current_index + key) % 26
+        result.append(alphabets[new_index])
+        
+    return ''.join(result)
 
 
 # Solution 3
 # Run time Complexity: O(n), Space Complexity: O(n)
 def transform_3(string, key):
     result = []
-	new_key = key % 26
-	
-	for ch in string:
-		current_index = ord(ch) - ord('a')
-		new_index = (current_index + new_key) % 26
-		new_ch = ord('a') + new_index
-		result.append(chr(new_ch))
-	
-	return ''.join(result)
+    new_key = key % 26
+    
+    for ch in string:
+        current_index = ord(ch) - ord('a')
+        new_index = (current_index + new_key) % 26
+        new_ch = ord('a') + new_index
+        result.append(chr(new_ch))
+    
+    return ''.join(result)
