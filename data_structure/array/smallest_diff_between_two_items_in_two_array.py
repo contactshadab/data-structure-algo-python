@@ -15,26 +15,28 @@ Input: arrayOne = [-1, 5, 10, 20, 28, 3], arrayTwo = [26, 134, 135, 15, 17]
 Output: [28, 26]
 '''
 
+# Run time complexity: O(nlog(n) + mlog(m)), Space complexity: O(1)
 
-def smallestDifference(arrayOne, arrayTwo):
-    arrayOne.sort()
-    arrayTwo.sort()
+
+def smallest_difference(array_one, array_two):
+    array_one.sort()
+    array_two.sort()
 
     p1 = 0
     p2 = 0
 
-    result = [arrayOne[0], arrayTwo[0]]
-    min_distance = abs(arrayOne[0] - arrayTwo[0])
-    while p1 < len(arrayOne) and p2 < len(arrayTwo):
-        if arrayOne[p1] == arrayTwo[p2]:
-            return [arrayOne[p1], arrayTwo[p2]]
+    result = []
+    min_distance = float('inf')
+    while p1 < len(array_one) and p2 < len(array_two):
+        if array_one[p1] == array_two[p2]:
+            return [array_one[p1], array_two[p2]]
 
-        distance = abs(arrayOne[p1] - arrayTwo[p2])
+        distance = abs(array_one[p1] - array_two[p2])
         if distance < min_distance:
             min_distance = distance
-            result = [arrayOne[p1], arrayTwo[p2]]
+            result = [array_one[p1], array_two[p2]]
 
-        if arrayOne[p1] < arrayTwo[p2]:
+        if array_one[p1] < array_two[p2]:
             p1 += 1
         else:
             p2 += 1
@@ -45,4 +47,4 @@ def smallestDifference(arrayOne, arrayTwo):
 if __name__ == "__main__":
     one = [-1, 5, 10, 20, 28, 3]
     two = [26, 134, 135, 15, 17]
-    print(smallestDifference(one, two))
+    print(smallest_difference(one, two))
