@@ -13,6 +13,6 @@ This repository contains Data Structures and Algorithms problems and their imple
 
 ## Algorithm
 
-- [Sorting](https://github.com/contactshadab/data-structure-algo-python/tree/main/algorithm/sorting)
 - [Dynamic Programming](https://github.com/contactshadab/data-structure-algo-python/tree/main/algorithm/dynamic_programming)
+- [Sorting](https://github.com/contactshadab/data-structure-algo-python/tree/main/algorithm/sorting)
 - [Searching](https://github.com/contactshadab/data-structure-algo-python/tree/main/algorithm/searching)
