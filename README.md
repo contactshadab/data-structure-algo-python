@@ -6,6 +6,7 @@ This repository contains Data Structures and Algorithms problems and their imple
 
 - [Array](https://github.com/contactshadab/data-structure-algo-python/tree/main/data_structure/array)
 - [String](https://github.com/contactshadab/data-structure-algo-python/tree/main/data_structure/string)
+- [Stack](https://github.com/contactshadab/data-structure-algo-python/tree/main/data_structure/stack)
 - [Binary Tree & Binary Search Tree](https://github.com/contactshadab/data-structure-algo-python/tree/main/data_structure/binary_tree)
 - [Heap](https://github.com/contactshadab/data-structure-algo-python/tree/main/data_structure/heap)
 - [AVL Tree](https://github.com/contactshadab/data-structure-algo-python/tree/main/data_structure/avl_tree)
@@ -13,4 +14,5 @@ This repository contains Data Structures and Algorithms problems and their imple
 ## Algorithm
 
 - [Sorting](https://github.com/contactshadab/data-structure-algo-python/tree/main/algorithm/sorting)
+- [Dynamic Programming](https://github.com/contactshadab/data-structure-algo-python/tree/main/algorithm/dynamic_programming)
 - [Searching](https://github.com/contactshadab/data-structure-algo-python/tree/main/algorithm/searching)
