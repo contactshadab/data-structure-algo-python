@@ -35,6 +35,7 @@ This repository contains Data Structures and Algorithms problems and their imple
   - [238. Product Of Array Except Self](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/238_product_of_array_except_self.py)
   - [273. Integer to English Words](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/273_integer_to_english_words.py)
   - [278. First bad version](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/278_first_bad_version.py)
+  - [340. Longest Substring with At Most K Distinct Characters](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/340_longest_substring_with_at_most_k_distinct_characters.py)
   - [560. Subarray sum equals K](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/560_sub_array_sum_equals_k.py)
   - [621. Task Scheduler](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/621_task_scheduler.py)
   - [680. Valid Palindrome II](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/680_valid_palindrome_2.py)
