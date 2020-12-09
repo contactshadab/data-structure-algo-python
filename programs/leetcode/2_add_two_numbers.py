@@ -66,8 +66,8 @@ def sum_list(l1, l2):
 
 
 if __name__ == "__main__":
-    l1 = NodeList(9, NodeList(0, NodeList(8, None)))
-    l2 = NodeList(8, NodeList(2, NodeList(9, None)))
+    l1 = ListNode(9, ListNode(0, ListNode(8, None)))
+    l2 = ListNode(8, ListNode(2, ListNode(9, None)))
 
     sum = sum_list(l1, l2)
     sum.display()
