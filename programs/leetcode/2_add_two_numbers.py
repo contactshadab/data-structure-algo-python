@@ -41,7 +41,7 @@ class ListNode:
 
 
 # Run time complexity: O(N) where N is the max number of items in between lists
-# Space complexity: O(1)
+# Space complexity: O(N)
 def sum_list(l1, l2):
     head = ListNode()
     p1, p2, p = l1, l2, head
