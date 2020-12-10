@@ -34,36 +34,52 @@ class ListNode:
             print(p.val, end=" ")
 
             p = p.next
+        print("")
 
 
-# Run time complexity: O(N) where N is the max number of items in between lists
-# Space complexity: O(N)
+# Solution 1
+# Run time complexity: O(M+N) where M and N are the number of items in both lists
+# Space complexity: O(1)
 def merge_two_lists(l1, l2):
     head = ListNode()
-    p1, p2, p = l1, l2, head
-
-    while p1 is not None and p2 is not None:
-        if p1.val < p2.val:
-            p.next = ListNode(p1.val)
-            p1 = p1.next
+    prev = head
+    while l1 is not None or l2 is not None:
+        if l2 is None or (l1 is not None and l1.val < l2.val):
+            prev.next = l1
+            prev = l1
+            l1 = l1.next
         else:
-            p.next = ListNode(p2.val)
-            p2 = p2.next
-
-        p = p.next
-
-    p1 = p2 if p1 is None else p1
-    while p1 is not None:
-        p.next = ListNode(p1.val)
-
-        p = p.next
-        p1 = p1.next
+            prev.next = l2
+            prev = l2
+            l2 = l2.next
 
     return head.next
 
 
+# Solution 2:
+# Run time complexity: O(M+N) where M and N are the number of items in both lists
+# Space complexity: O(M+N)
+def merge_two_lists_recursion(l1, l2):
+    if not l1:
+        return l2
+
+    if not l2:
+        return l1
+
+    if l1.val < l2.val:
+        l1.next = merge_two_lists_recursion(l1.next, l2)
+        return l1
+    else:
+        l2.next = merge_two_lists_recursion(l1, l2.next)
+        return l2
+
+
 if __name__ == "__main__":
-    l1 = ListNode(1, ListNode(2, ListNode(4, None)))
-    l2 = ListNode(1, ListNode(3, ListNode(4, None)))
+    l1 = ListNode(2, ListNode(2, ListNode(4, None)))
+    l2 = ListNode(1, ListNode(5, ListNode(7, None)))
+
     res = merge_two_lists(l1, l2)
+    res.display()
+
+    res = merge_two_lists_recursion(l1, l2)
     res.display()
