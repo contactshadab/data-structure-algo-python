@@ -25,6 +25,8 @@ All the integers of nums are unique.
 '''
 
 
+# Run time complexity: O(n* n!), worst case
+# Space complexity: O(n!)
 def permute(nums):
     def backtrack(position):
         if position == len(nums):
