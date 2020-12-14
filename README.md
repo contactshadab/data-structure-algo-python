@@ -29,6 +29,7 @@ This repository contains Data Structures and Algorithms problems and their imple
   - [21. Merge Two Sorted Lists](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/21_merge_two_sorted_lists.py)
   - [26. Remove Duplicates from Sorted Array](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/26_remove_duplicates_from_sorted_array.py)
   - [31. Next Permutation](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/31_next_permutation.py)
+  - [46. Permutations](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/46_permutations.py)
   - [49. Group Anagrams](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/49_group_anagrams.py)
   - [67. Add Binary](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/67_add_binary.py)
   - [76. Minimum Window Substring](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/76_minimum_window_substring.py)
