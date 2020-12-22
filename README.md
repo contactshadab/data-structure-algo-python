@@ -23,6 +23,7 @@ This repository contains Data Structures and Algorithms problems and their imple
   - [2. Add Two Numbers](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/2_add_two_numbers.py)
   - [3. Longest Substring Without Repeating Characters](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/3_longest_substring_without_repeating_character.py)
   - [8. String to Integer (atoi)](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/8_string_to_integer.py)
+  - [10. Regular Expression Matching](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/10_regular_expression_matching.py)
   - [13. Roman to Integer](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/13_roman_to_integer.py)
   - [15. 3 Sum](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/15_3_sum.py)
   - [17. Letter Combinations of a Phone Number](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/17_letter_combinations_of_a_phone_number.py)
