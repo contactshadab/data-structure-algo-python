@@ -35,6 +35,7 @@ This repository contains Data Structures and Algorithms problems and their imple
   - [49. Group Anagrams](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/49_group_anagrams.py)
   - [67. Add Binary](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/67_add_binary.py)
   - [76. Minimum Window Substring](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/76_minimum_window_substring.py)
+  - [78. Subsets](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/78_subsets.py)
   - [88. Merge Sorted Array](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/88_merge_sorted_array.py)
   - [91. Decode Ways](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/91_decode_ways.py)
   - [138. Copy List with Random Pointer](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/138_copy_list_with_random_pointer.py)
