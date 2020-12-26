@@ -72,5 +72,35 @@ def search(nums, target):
         return binarysearch(0, rotation_index)
 
 
+def search_single_binary_search(nums, target):
+
+    def binarysearch(left, right):
+        while left <= right:
+            mid = (left + right) // 2
+            if target == nums[mid]:
+                return mid
+
+            if nums[mid] >= nums[left]:
+                # Mid is not in rotated part and its increasing from left to mid
+                if target >= nums[left] and target < nums[mid]:
+                    right = mid - 1
+                else:
+                    left = mid + 1
+            else:
+                # Mid is in rotated array part
+                if target <= nums[right] and target > nums[mid]:
+                    left = mid + 1
+                else:
+                    right = mid - 1
+
+        return -1
+
+    if len(nums) == 1:
+        return 0 if nums[0] == target else -1
+
+    return binarysearch(0, len(nums)-1)
+
+
 if __name__ == "__main__":
     print(search([4, 5, 6, 7, 0, 1, 2], 0))
+    print(search_single_binary_search([4, 5, 6, 7, 0, 1, 2], 0))
