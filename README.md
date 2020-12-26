@@ -31,6 +31,7 @@ This repository contains Data Structures and Algorithms problems and their imple
   - [26. Remove Duplicates from Sorted Array](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/26_remove_duplicates_from_sorted_array.py)
   - [29. Divide Two Integers](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/29_divide_two_integers.py)
   - [31. Next Permutation](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/31_next_permutation.py)
+  - [33. Search in Rotated Sorted Array](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/33_search_in_rotated_sorted_array.py)
   - [46. Permutations](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/46_permutations.py)
   - [47. Permutations II](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/47_permutations_ii.py)
   - [49. Group Anagrams](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/49_group_anagrams.py)
