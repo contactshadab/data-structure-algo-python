@@ -36,6 +36,7 @@ This repository contains Data Structures and Algorithms problems and their imple
   - [46. Permutations](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/46_permutations.py)
   - [47. Permutations II](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/47_permutations_ii.py)
   - [49. Group Anagrams](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/49_group_anagrams.py)
+  - [50. Pow(x, n)](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/50_pow.py)
   - [67. Add Binary](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/67_add_binary.py)
   - [76. Minimum Window Substring](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/76_minimum_window_substring.py)
   - [78. Subsets](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/78_subsets.py)
