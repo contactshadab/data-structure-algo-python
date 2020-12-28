@@ -29,18 +29,22 @@ Constraints:
 '''
 
 
+# Run time complexity: O(log N)
+# Space complexity: O(1)
 def first_bad_version(n):
-    left = 1
-    right = n
-    while left <= right:
-        mid = (left+right) // 2
+    """
+    :type n: int
+    :rtype: int
+    """
+    left, right = 1, n
+    while left < right:
+        mid = (left + right) // 2
         if isBadVersion(mid):
-            if left == right:
-                return left
-            bad = mid
             right = mid
         else:
             left = mid + 1
+
+    return left
 
 
 if __name__ == "__main__":
