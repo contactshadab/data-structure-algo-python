@@ -46,6 +46,7 @@ This repository contains Data Structures and Algorithms problems and their imple
   - [138. Copy List with Random Pointer](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/138_copy_list_with_random_pointer.py)
   - [143. Reorder List](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/143_reorder_list.py)
   - [161. One Edit Distance](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/161_one_edit_distance.py)
+  - [162. Find Peak Element](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/162_find_peak_element.py)
   - [238. Product Of Array Except Self](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/238_product_of_array_except_self.py)
   - [273. Integer to English Words](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/273_integer_to_english_words.py)
   - [278. First bad version](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/278_first_bad_version.py)
