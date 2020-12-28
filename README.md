@@ -53,6 +53,7 @@ This repository contains Data Structures and Algorithms problems and their imple
   - [301. Remove Invalid Parentheses](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/301_remove_invalid_parentheses.py)
   - [340. Longest Substring with At Most K Distinct Characters](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/340_longest_substring_with_at_most_k_distinct_characters.py)
   - [349. Intersection of Two Arrays](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/349_intersection_of_two_arrays.py)
+  - [350. Intersection of Two Arrays II](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/350_intersection_of_two_arrays_ii.py)
   - [468. Validate IP Address](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/468_validate_ip_address.py)
   - [560. Subarray sum equals K](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/560_sub_array_sum_equals_k.py)
   - [621. Task Scheduler](https://github.com/contactshadab/data-structure-algo-python/tree/main/programs/leetcode/621_task_scheduler.py)
