@@ -49,3 +49,43 @@ def longestPalindrome(s):
             longest = even
 
     return longest
+
+
+# Solution 2: DP
+# Run time complexity: O(n^2)
+# Space complexity: O(n^2)
+def longest_palindrome_dp(s):
+    n = len(s)
+    dp = [[None for j in range(n)] for i in range(n)]
+
+    start = 0
+    length = 1
+
+    # Calculate dp table for all substrings of length greater than 2
+    for l in range(1, n+1):
+        i = 0
+        while i < n - l + 1:
+            j = i + l - 1
+            if l == 1:
+                dp[i][i] = True
+                if l > length:
+                    start = i
+                    length = l
+            elif l == 2:
+                if s[i] == s[j]:
+                    dp[i][i+1] = True
+                    if l > length:
+                        start = i
+                        length = l
+            else:
+                if s[i] == s[j] and dp[i+1][j-1]:
+                    dp[i][j] = True
+                    if l > length:
+                        start = i
+                        length = l
+                else:
+                    dp[i+1][j-1] = False
+
+            i += 1
+
+    return s[start: start+length]
