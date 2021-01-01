@@ -29,7 +29,7 @@ s[i] is '(', or ')'.
 
 # Run time complexity: O(n)
 # Space complexity: O(n)
-def longestValidParentheses(s):
+def longest_valid_parentheses_2(s):
     if not s:
         return 0
 
@@ -46,3 +46,44 @@ def longestValidParentheses(s):
             longest = max(longest, l)
 
     return longest
+
+
+# Run time complexity: O(n)
+# Space complexity: O(1)
+def longest_valid_parentheses_2(s):
+    if not s:
+        return 0
+
+    longest = 0
+    left, right = 0, 0
+    for i in range(len(s)):
+        if s[i] == '(':
+            left += 1
+        else:
+            right += 1
+
+        if right > left:
+            left = right = 0
+
+        if left == right:
+            longest = max(longest, left + right)
+
+    left, right = 0, 0
+    for i in range(len(s)-1, -1, -1):
+        if s[i] == '(':
+            left += 1
+        else:
+            right += 1
+
+        if left > right:
+            left = right = 0
+
+        if left == right:
+            longest = max(longest, left + right)
+
+    return longest
+
+
+if __name__ == "__main__":
+    print(longestValidParentheses('()((()))(())((('))
+    print(longest_valid_parentheses_2('()((()))(())((('))
