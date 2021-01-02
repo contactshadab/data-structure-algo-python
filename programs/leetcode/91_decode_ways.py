@@ -107,7 +107,7 @@ def num_decodings_2(s):
 
 # Solution 3: DP
 # Run time complexity: O(n)
-# Space complexity: O(1)
+# Space complexity: O(n)
 def num_decodings_3(s):
     if s is None or len(s) == 0:
         return 0
